@@ -1,12 +1,16 @@
 html, body {
     margin: 0;
     padding: 0;
-    display: flex;
-    flex-direction: row;
 }
 
 body {
     font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    display: flex;
+}
+
+.container {
+    display: flex;
+    flex-direction: row;
 }
 
 .side-menu {
@@ -15,6 +19,7 @@ body {
     display: flex;
     flex-direction: column;
     position: relative;
+    flex-shrink: 0;
 }
 
 .side-menu #hidden-menu-icon {
@@ -30,7 +35,7 @@ body {
     top: 0;
     left: 0;
     width: 15rem;
-    height: 100%;
+    bottom: 0;
     z-index: 100;
     overflow: hidden;
     transition: width 1s;
@@ -75,15 +80,34 @@ body {
 }
 
 .headline h1 {
-    margin-right: 2rem;
+    margin-right: .5rem;
+    font-size: 8vw;
+}
+
+.headline h3 {
+    font-size: 5vw;
 }
 
 .headline {
     height: 5rem;
-    width: 70vw;
-    margin: 3rem 4rem;
+    width: 85%;
+    margin: 2rem 1rem;
     border-bottom: 1px solid black;
 }
+
+.main-content {
+    width: 100%;
+}
+
+.main-content img {
+    border-radius: 100%;
+}
+
+.main-content .image {
+    width: 100%;
+    text-align: center;
+}
+
 
 
 
