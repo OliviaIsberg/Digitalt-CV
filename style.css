@@ -3,7 +3,7 @@ html, body {
     padding: 0;
 }
 
-header {
+aside {
     height: 100vh;
     width: 10rem;
     background-color: lightblue;
@@ -16,47 +16,48 @@ header {
     overflow: hidden;
 }
 
-header #hidden-menu-icon {
+aside #hidden-menu-icon {
     font-size: 40px;
-    margin-top: 1rem;
-    margin-left: .5rem;
+    /* margin-top: 1rem; */
+    /* margin-left: .5rem; */
+    cursor: pointer;
+    padding: 0.5rem;
 }
 
-header ul {
-    margin: 0;
-    padding: 0;
+aside ul {
     margin-top: 4rem;
-    margin-left: .5rem;
+    padding: 0.5rem;
+    margin-left: 0.5rem;
 }
 
-header ul li {
+aside ul li {
     list-style: none;
-    margin-bottom: 1rem;
+    margin-bottom: 3rem;
     font-size: 20px;
 }
 
-header ul li a {
+aside ul li a {
     text-decoration: none;
     color: black;
 }
 
-header #github {
+aside #github {
     font-size: 30px;
     margin-right: 2rem;
 }
 
-header .github-account {
+aside .github-account {
     display: flex;
     flex-direction: row;
 }
 
-header .contact {
+aside .contact {
     display: flex;
     flex-direction: row;
    
 }
 
-header #email {
+aside #email {
     margin-right: 2rem;
     font-size: 30px;
 }
