@@ -11,15 +11,22 @@ header {
     flex-direction: column;
 }
 
+.show-menu {
+    width: 4rem;
+    overflow: hidden;
+}
+
 header #hidden-menu-icon {
-    font-size: 35px;
+    font-size: 40px;
+    margin-top: 1rem;
+    margin-left: .5rem;
 }
 
 header ul {
     margin: 0;
     padding: 0;
     margin-top: 4rem;
-    margin-left: 1rem;
+    margin-left: .5rem;
 }
 
 header ul li {
@@ -35,7 +42,7 @@ header ul li a {
 
 header #github {
     font-size: 30px;
-    margin-right: 1rem;
+    margin-right: 2rem;
 }
 
 header .github-account {
@@ -50,6 +57,6 @@ header .contact {
 }
 
 header #email {
-    margin-right: 1.2rem;
+    margin-right: 2rem;
     font-size: 30px;
 }
