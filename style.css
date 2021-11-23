@@ -3,12 +3,14 @@ html, body {
     padding: 0;
 }
 
-aside {
+.side-menu {
     height: 100vh;
     width: 10rem;
-    background-color: lightblue;
+    background: rgba(0, 0, 0, 0.2);
     display: flex;
     flex-direction: column;
+    transition: width 1s;
+    overflow: hidden;
 }
 
 .show-menu {
@@ -16,48 +18,46 @@ aside {
     overflow: hidden;
 }
 
-aside #hidden-menu-icon {
+.side-menu #hidden-menu-icon {
     font-size: 40px;
-    /* margin-top: 1rem; */
-    /* margin-left: .5rem; */
     cursor: pointer;
     padding: 0.5rem;
 }
 
-aside ul {
+.side-menu ul {
     margin-top: 4rem;
     padding: 0.5rem;
     margin-left: 0.5rem;
 }
 
-aside ul li {
+.side-menu ul li {
     list-style: none;
     margin-bottom: 3rem;
     font-size: 20px;
 }
 
-aside ul li a {
+.side-menu ul li a {
     text-decoration: none;
     color: black;
 }
 
-aside #github {
+.side-menu #github {
     font-size: 30px;
     margin-right: 2rem;
 }
 
-aside .github-account {
+.side-menu .github-account {
     display: flex;
     flex-direction: row;
 }
 
-aside .contact {
+.side-menu .contact {
     display: flex;
     flex-direction: row;
    
 }
 
-aside #email {
+.side-menu #email {
     margin-right: 2rem;
     font-size: 30px;
 }
