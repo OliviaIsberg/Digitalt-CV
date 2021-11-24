@@ -14,8 +14,8 @@ body {
 }
 
 .side-menu {
-    height: 100vh;
-    width: 4em;
+    min-height: 100vh;
+    width: 3em;
     display: flex;
     flex-direction: column;
     position: relative;
@@ -25,7 +25,8 @@ body {
 .side-menu #hidden-menu-icon {
     font-size: 35px;
     cursor: pointer;
-    padding: 1rem;
+    padding: .5rem;
+    margin-top: 1rem;
 }
 
 .side-menu #menu-items{
@@ -59,7 +60,8 @@ body {
 
 .side-menu ul li a {
     display: block;
-    padding: 1rem 1rem;
+    padding: 0.5rem;
+    margin-bottom: 1rem;
     text-decoration: none;
     color: black;
 }
@@ -81,11 +83,11 @@ body {
 
 .headline h1 {
     margin-right: .5rem;
-    font-size: 8vw;
+    font-size: 40px;
 }
 
 .headline h3 {
-    font-size: 5vw;
+    font-size: 25px;
 }
 
 .headline {
@@ -108,6 +110,15 @@ body {
     text-align: center;
 }
 
+.descriptive-text {
+    margin-left: 1rem;
+}
 
+.descriptive-text h4 {
+    font-size: 25px;
+}
 
+.descriptive-text h5 {
+    font-size: 20px;
+}
 
