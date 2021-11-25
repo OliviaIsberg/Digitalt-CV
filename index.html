@@ -6,6 +6,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="style.css">
     <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.15.4/css/all.css">
+	<link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Source+Sans+Pro:200,300,400,600,700,900" type="text/css">
     <script src="main.js"></script>
     <title>Olivia Isberg | CV</title>
 </head>
@@ -21,31 +22,44 @@
         </div>
     </aside>
     <main class="main-content">
-        <header class="headline">
-            <h1>CV</h1>
-            <h3>Olivia Isberg</h3>
-        </header>
-        <div class="image">
-            <img src="Olivia.jpg" width="150vw" height="150vh">
-        </div>
+		<article class="photo">
+			<img src="Olivia.jpg" id="photo" width="151" height="151">
+		</article>
         <article class="descriptive-text">
-            <!-- Information about me -->
-            <h2>Student på medieinstitutet</h2>
-            <p>Hej! Olivia Isberg heter jag och jag läser mitt första år på medieinstitutet med inriktining front end devoloper.</p>
-            <!-- Education -->
-            <h4>Utbildning</h4>
-            <h5>Yrkeshögskola Medieinstitutet</h5>
-            <p>Front end developer | 2021 - 2023</p>
-            <h5>Elof lindälvs gymnasium</h5>
-            <p>Hotell och turism | 2011 - 2014</p>
-            <!-- Work experience -->
-            <h4>Arbetslivserfarenhet</h4>
-            <h5>Ica Sannegården</h5>
-            <p>Driftansvarig | September 2021 - nuvarande</p>
-            <h5>Hemköp Bifrost</h5>
-            <p>Spel och postansvarig | Septemer 2014 - September 2021</p>
-            <h3>Nuvarande utbildning</h3>
-            <h4>Kurser</h4>
+			<!-- Information about me -->
+			<article class="olivia">
+				<h1>Olivia Isberg <span class="thin">| <span id="c-locator">C</span>V</span></h1>
+				<p>Front End Developer under utbildning</p>
+			</article>
+			<p>
+				Jag är en 26-årig tjej som just nu studerar till Front End Developer på Medieinstitutet i Göteborg.
+			</p>
+		
+			<!-- Yrkeserfarenhet & Utbildningar -->
+            <h2 class="cv-header">Curriculum Vitae</h2>
+			<section class="cv">
+				<article class="activity">
+					<h3>Medieinstitutet</h3>
+					<p>Utbildning | Front end developer | 2021 - 2023</p>
+				</article>
+
+				<article class="activity">
+					<h3>Ica Sannegården</h3>
+					<p>Jobb | Driftansvarig | September 2021 - nuvarande</p>
+				</article>
+				<article class="activity">
+					<h3>Hemköp Bifrost</h3>
+					<p>Jobb | Spel och postansvarig | Septemer 2014 - September 2021</p>
+				</article>
+
+				<article class="activity">
+					<h3>Elof Lindälvs gymnasium</h3>
+					<p>Utbildning |Hotell och turism | 2011 - 2014</p>
+				</article>
+			</section>
+
+			<!-- Utbildning -->
+            <h2>Kurser</h2>
             <p>HTML och CSS | <i class="fas fa-check"></i></p>
             <p>Ux och usibility | <i class="fas fa-check"></i></p>
             <p>Javascript grundkurs | vecka 44 - 51 2021 | vecka 2 - 5 2022</p>
@@ -57,6 +71,19 @@
 
         </article>
     </main>
-    
+    <svg class="lineanim">
+		<path id="path" d="
+			M 2016 921 
+			C 1728 921 1632 736 1536 562 
+			C 1440 388 1344 195 902 195 
+			A 1 1 0 0 1 902 35 
+			A 1 1 0 0 1 902 195 
+			C 664 195 295 312 182 199 
+			A 80 80 0 0 1 239 63 
+			A 80 80 0 0 1 239 223 
+			C 79 223 -96 39 -96 -145
+		" />
+	</svg>
+	<script src="lineanim.js"></script>
 </body>
 </html>
