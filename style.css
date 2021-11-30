@@ -79,8 +79,13 @@ h1, h2, h3 {
 }
 
 .main-content {
-	display: flex;
-	padding: 4em 10rem;
+	display: grid;
+	grid-template-columns: repeat(12, 1fr);
+	margin: 4rem 5rem;
+}
+
+.photo {
+	grid-column: 1 / 3;
 }
 
 .descriptive-text {
