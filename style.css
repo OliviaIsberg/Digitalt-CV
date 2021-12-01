@@ -15,9 +15,10 @@ body {
 	flex-shrink: 0;
 	min-height: 100vh;
     width: 5em;
-    position: fixed;
+    position: sticky;
 	top: 0;
 	left: 0;
+	float: left;
 }
 
 .side-menu #hidden-menu-icon {
@@ -61,7 +62,6 @@ body {
 
 .side-menu ul li a {
     display: block;
-    padding: 0.5rem;
     margin-bottom: 1rem;
     text-decoration: none;
     color: black;
@@ -78,17 +78,25 @@ body {
 }
 
 .main-content {
+	/*
 	display: grid;
 	grid-template-columns: repeat(12, 1fr);
-	padding: 4em 10rem;
+	*/
+	display: flex;
+	padding: 4em 6rem;
 }
 
 .photo {
+	/*
 	grid-column: 1 / 3;
+	*/
+	padding-right: 2rem;
 }
 
 .descriptive-text {
-	grid-column: 3 / 10;
+	/*
+	grid-column: 3 / 12;
+	*/
 }
 
 .main-content  h1 {
@@ -131,7 +139,9 @@ body {
 }
 
 .descriptive-text {
+	/*
 	padding: 0 3rem;
+	*/
 }
 
 .descriptive-text p {
@@ -201,12 +211,68 @@ svg #path {
 	}
 }
 
+@media only screen and (max-width: 1167px) {
+	.main-content {
+		flex-direction: column;
+	}
+}
+
+@media only screen and (max-width: 931px) {
+	.main-content {
+		padding-left: 10.31vw;
+		padding-right: 10.31vw;
+	}
+}
+
+@media only screen and (max-width: 832px) {
+	.olivia h1 {
+		font-size: 9.61vw;
+	}
+}
+
+@media only screen and (max-width: 1050px)  {
+	.main-content  h2 {
+		font-size: 6.85vw;
+		font-weight: 600;
+	}
+}
+
+@media screen and (max-width: 768px) {
+	.photo {
+		/*
+		grid-column: 1 / 12;
+		margin: auto;
+		*/
+	}
+
+	.main-content {
+		/*
+		padding: 0;
+		grid-column: 1 / 12;
+		margin: 1rem 3rem;
+		margin-left: 2.5rem;
+		*/
+	}
+
+	.main-content .cv, .education {
+		padding: 0;
+	}
+
+	.descriptive-text {
+		/*
+		grid-column: 1 / 12;
+		*/
+	}
+	
+}
+
 @media only screen and (max-width: 576px)  {
 	.side-menu {
 		top: auto;
 		bottom: 0;
-		min-width: 100vw;
+		min-width: 100%;
 		flex-direction: row;
+		position: fixed;
 	}
 
 	.side-menu #hidden-menu-icon {
@@ -226,6 +292,7 @@ svg #path {
 
 	.side-menu ul li, .side-menu ul li a {
 		display: inline;
+		padding: 0.5rem;
 	}
 
 	.side-menu .socials i {
@@ -239,18 +306,14 @@ svg #path {
 	.main-content {
 		max-width: 100vw;
 		margin: auto;
-		padding: 0;
+		padding: 0 1rem;
+		margin-bottom: 6em;
 	}
 
 	.photo {
 		grid-column: 1 / 12;
 		padding: 2rem 0;
 		margin: auto;
-	}
-
-	.olivia {
-		box-sizing: border-box;
-		width: 100vw;
 	}
 
 	.olivia h1 {
@@ -260,8 +323,11 @@ svg #path {
 
 	.descriptive-text {
 		grid-column: 1 / 12;
-		margin: 0;
+		/* margin: auto; */
 		padding: 0;
+		max-width: 100vw;
+		margin: 0 1rem;
+		margin-left: 0;
 	}
 
 	.main-content .cv {
@@ -269,16 +335,20 @@ svg #path {
 		margin: 0;
 	}
 
-	.cv h3 {
-		font-size: 6vw;
+	.main-content .cv-header{
+		font-size: 11vw;
+		margin-bottom: 2rem;
+		font-weight: 700;
+	}
+
+	.main-content .activity h3 {
+		font-size: 10vw;
 		padding: 0;
 		margin: 0;
 	}
-}
 
-@media only screen and (max-width: 1050px)  {
-	.main-content  h2 {
-		font-size: 6.85vw;
-		font-weight: 600;
+	.education {
+		grid-column: 1 / 12;
+		padding: 0;
 	}
 }
