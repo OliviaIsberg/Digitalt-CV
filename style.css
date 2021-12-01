@@ -6,6 +6,7 @@ html, body {
 body {
 	font-family: 'Source Sans Pro', sans-serif;
 	color: #182532;
+	background-color: #fff;
 }
 
 .side-menu {
@@ -13,17 +14,18 @@ body {
     flex-direction: column;
 	flex-shrink: 0;
 	min-height: 100vh;
-    width: 3em;
+    width: 5em;
     position: fixed;
 	top: 0;
 	left: 0;
 }
 
 .side-menu #hidden-menu-icon {
-    font-size: 35px;
+    font-size: 40px;
     cursor: pointer;
     padding: .5rem;
     margin-top: 1rem;
+	margin-left: 0.6rem;
 }
 
 .side-menu #menu-items{
@@ -46,8 +48,9 @@ body {
 
 .side-menu ul {
     margin-top: 4rem;
-    padding: 0;
+    padding: .5rem;
     width: 15rem;
+	margin-left: .6rem;
 }
 
 .side-menu ul li {
@@ -68,12 +71,8 @@ body {
     background: rgba(255, 255, 255, .3);
 }
 
-h1, h2, h3 {
-	
-}
-
 .side-menu .socials i {
-    font-size: 30px;
+    font-size: 35px;
     margin-right: 2rem;
     width: 1.5ex;
 }
@@ -81,7 +80,7 @@ h1, h2, h3 {
 .main-content {
 	display: grid;
 	grid-template-columns: repeat(12, 1fr);
-	margin: 4rem 5rem;
+	padding: 4em 10rem;
 }
 
 .photo {
@@ -89,32 +88,8 @@ h1, h2, h3 {
 }
 
 .descriptive-text {
-	padding: 0 3rem;
+	grid-column: 3 / 10;
 }
-
-.descriptive-text p {
-	padding-left: 0.4rem;
-}
-
-.olivia {
-	margin-bottom: 4rem;
-}
-
-.olivia h1, p {
-	margin: 0;
-}
-
-.olivia h1 {
-	white-space: nowrap;
-}
-
-.olivia h1 .thin {
-	font-weight: 100;
-}
-
-.olivia p {
-}
-
 
 .main-content  h1 {
     font-size: 5em;
@@ -155,6 +130,39 @@ h1, h2, h3 {
 	animation: photo-outline 4s linear forwards;
 }
 
+.descriptive-text {
+	padding: 0 3rem;
+}
+
+.descriptive-text p {
+	padding-left: 0.4rem;
+}
+
+.olivia {
+	margin-bottom: 4rem;
+}
+
+.olivia h1, p {
+	margin: 0;
+}
+
+.olivia h1 {
+	white-space: nowrap;
+}
+
+.olivia h1 .thin {
+	font-weight: 100;
+}
+
+.education {
+	padding: 0 3rem;
+}
+
+.education p {
+	font-size: 18px;
+	line-height: 2;
+}
+
 @keyframes photo-outline {
 	60% {
 		outline: 3px solid transparent;	
@@ -163,10 +171,6 @@ h1, h2, h3 {
 	61%, 100% {
 		outline: 3px solid #000;
 	}
-}
-
-.main-content .image {
-	display: inline;
 }
 
 svg {
@@ -194,6 +198,81 @@ svg #path {
 @keyframes animate-line {
 	to {
 		stroke-dashoffset: var(--dashoffsetafter);
+	}
+}
+
+@media only screen and (max-width: 576px)  {
+	.side-menu {
+		top: auto;
+		bottom: 0;
+		min-width: 100vw;
+		flex-direction: row;
+	}
+
+	.side-menu #hidden-menu-icon {
+		display:none;
+	}
+
+	.side-menu #menu-items {
+		top: auto;
+		padding: 1rem 0;
+	}
+
+	.side-menu ul {
+		margin: 0;
+		width: auto;
+		text-align: center;
+	}
+
+	.side-menu ul li, .side-menu ul li a {
+		display: inline;
+	}
+
+	.side-menu .socials i {
+		margin: 0;
+	}
+
+	.side-menu ul li a .label {
+		display: none;
+	}
+
+	.main-content {
+		max-width: 100vw;
+		margin: auto;
+		padding: 0;
+	}
+
+	.photo {
+		grid-column: 1 / 12;
+		padding: 2rem 0;
+		margin: auto;
+	}
+
+	.olivia {
+		box-sizing: border-box;
+		width: 100vw;
+	}
+
+	.olivia h1 {
+		font-size: 12vw;
+		display: block;
+	}
+
+	.descriptive-text {
+		grid-column: 1 / 12;
+		margin: 0;
+		padding: 0;
+	}
+
+	.main-content .cv {
+		padding: 0;
+		margin: 0;
+	}
+
+	.cv h3 {
+		font-size: 6vw;
+		padding: 0;
+		margin: 0;
 	}
 }
 
