@@ -30,8 +30,8 @@ body {
 }
 
 .side-menu #menu-items{
-    background-color: rgba(0, 0, 0, .2);
-	background-image: url(test.png);
+    background-color: rgba(0, 0, 0, .7);
+	/* background-image: url(test.png); */
     backdrop-filter: blur(5px);
     position: absolute;
     top: 0;
@@ -41,6 +41,7 @@ body {
     z-index: 100;
     overflow: hidden;
     transition: width 1s;
+	color: rgba(255, 255, 255, .7);
 }
 
 .side-menu.show-menu #menu-items {
@@ -64,7 +65,7 @@ body {
     display: block;
     margin-bottom: 1rem;
     text-decoration: none;
-    color: black;
+    color: inherit;
 }
 
 .side-menu ul li a:hover {
@@ -114,19 +115,32 @@ body {
 	padding: 0 3rem;
 }
 
-.main-content .activity {
+.main-content .cv .activity {
 	margin-bottom: 3rem;
 }
 
-.main-content .activity h3 {
-    font-size: 3.5em;
+.main-content .education .activity {
+	margin-bottom: 1rem;
+}
+
+.main-content .activity h3, .main-content .activity h4 {
 	font-weight: 600;
-	text-transform: uppercase;
 	margin-bottom: .5rem;
 	padding-left: .2rem;
 }
 
+.main-content .activity h3 {
+	text-transform: uppercase;
+	font-size: 3.5em;
+}
+
+.main-content .activity h4 {
+	font-size: 2.5em;
+	margin: 2rem 0 0 0;
+}
+
 .main-content .activity p {
+	margin: 0;
 	font-size: 1.1875em;
 	color: #858585;
 }
@@ -152,7 +166,7 @@ body {
 	margin-bottom: 4rem;
 }
 
-.olivia h1, p {
+.olivia h1, .olivia p {
 	margin: 0;
 }
 
@@ -164,14 +178,39 @@ body {
 	font-weight: 100;
 }
 
+.about-me {
+	width: 60%;
+	font-size: 24px;
+	font-weight: 400;
+	color: black;
+}
+
 .education {
 	padding: 0 3rem;
 }
 
 .education p {
-	font-size: 18px;
-	line-height: 2;
+	margin-bottom: 1rem;
+	font-size: 20px;
 }
+
+.education p .start-date {
+	display: block;
+	color: #999;
+	font-size: 20px;
+}
+
+
+.check-icon{
+	font-size: 25px;
+	color: lightgreen;
+	margin-left: 1rem;
+}
+
+/* table {
+	border-spacing: 5px;
+	font-size: 18px;
+} */
 
 @keyframes photo-outline {
 	60% {
@@ -208,6 +247,12 @@ svg #path {
 @keyframes animate-line {
 	to {
 		stroke-dashoffset: var(--dashoffsetafter);
+	}
+}
+
+@media only screen and (max-width: 1400px) {
+	.main-content .about-me {
+		width: unset;
 	}
 }
 
@@ -273,6 +318,7 @@ svg #path {
 		min-width: 100%;
 		flex-direction: row;
 		position: fixed;
+		min-height: unset;
 	}
 
 	.side-menu #hidden-menu-icon {
@@ -348,7 +394,26 @@ svg #path {
 	}
 
 	.education {
-		grid-column: 1 / 12;
+		/* grid-column: 1 / 12; */
 		padding: 0;
 	}
+
+	.education p {
+		margin-bottom: 1rem;
+	}
+
+	.education p .start-date {
+		display: block;
+		color: #999;
+		font-size: 16px;
+	}
+
+	.education p .start-date:before {
+		content: unset;
+	}
+
+	/* table{
+		border-spacing: 10px;
+		font-size: 18px;
+	} */
 }
