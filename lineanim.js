@@ -44,7 +44,10 @@ function drawLine() {
 	].join('');
 
 	pathElement.setAttribute('d', path);
-	pathElement.style.setProperty('--dashlen', pathElement.getTotalLength());
+
+	let pathLength = pathElement.getTotalLength();
+	pathElement.style.setProperty('--dash-length', pathLength);
+	pathElement.style.setProperty('--dash-start', pathLength * 3);
 }
 
 window.addEventListener('load', drawLine);

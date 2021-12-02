@@ -233,20 +233,24 @@ svg {
 }
 
 svg #path {
-	--dashlen: 4000;
+	--dash-length: 4000;
+	--dash-start: 12000;
 	
 	fill: none;
 	stroke: #000;
 	stroke-width: 3px;
-	stroke-dasharray: var(--dashlen);
-	stroke-dashoffset: calc(var(--dashlen) * 3);
+	stroke-dasharray: var(--dash-length);
+	stroke-dashoffset: var(--dash-start);
 	animation: animate-line 4s linear forwards;
 	animation-timing-function: ease-in-out;
 }
 
 @keyframes animate-line {
+	from {
+		stroke-dashoffset: var(--dash-start);	
+	}
 	to {
-		stroke-dashoffset: var(--dashlen);
+		stroke-dashoffset: var(--dash-length);
 	}
 }
 
