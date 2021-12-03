@@ -303,6 +303,7 @@ body {
 	margin-left: 1rem;
 }
 
+/* adds outline to CV photo, after lineanimation has looped around it */
 @keyframes photo-outline {
 	60% {
 		outline: 3px solid transparent;	
@@ -313,6 +314,10 @@ body {
 	}
 }
 
+/*
+svg element containing path element for line effect on load.
+Has negative z-index to place it behind the content 
+*/
 svg {
 	position: absolute;
 	top: 0;
@@ -322,6 +327,11 @@ svg {
 	z-index: -1;
 }
 
+/* 
+svg path for line animation 
+variable --dash-length defines the stroke dash length, is overridden with javascript
+variable --dash-start defines the start positon of the stroke dash, is overridden with javascript 
+*/
 svg #path {
 	--dash-length: 4000;
 	--dash-start: 12000;
@@ -335,6 +345,7 @@ svg #path {
 	animation-timing-function: ease-in-out;
 }
 
+/* keyframe animation to animate the dash stroke across the screen */
 @keyframes animate-line {
 	from {
 		stroke-dashoffset: var(--dash-start);	

@@ -1,4 +1,9 @@
-window.addEventListener('load', main);
+/*
+ * Adds event listener to window DOMContentLoaded Event to execute main-function
+ * Listens to Window DOMContentLoaded instead of Window Load to execute the function
+ * as soon as the DOM is ready instead of waiting for every resource to finish loading and rendering. 
+ */
+window.addEventListener('DOMContentLoaded', main);
 
 /**Start of the program */
 function main() {
@@ -13,7 +18,13 @@ function addEventListeners() {
     let contact = document.getElementById('contact');
 	contact.onclick = toggleContactForm;
 }
-/**Function that hides sidemenu */
+
+/**
+ * Event listener that toggles the sideemnu
+ *
+ * @param {MouseEvent} e - The MouseEvent click event.
+ * @listens MouseEvent
+ */
 function toggleMenu(e) {
     let aside = document.querySelector('aside');
     aside.classList.toggle('show-menu');
@@ -21,6 +32,12 @@ function toggleMenu(e) {
 	e.preventDefault();
 }
 
+/**
+ * Event listener that toggles the contact form
+ *
+ * @param {MouseEvent} e - The MouseEvent click event.
+ * @listens MouseEvent
+ */
 function toggleContactForm(e) {
 	let aside = document.querySelector('aside');
     aside.classList.toggle('show-contact');

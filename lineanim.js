@@ -1,15 +1,46 @@
+/**
+ * Generates SVG Path Command String for the Move Command
+ * @param {number} x - X Coordinate to move to
+ * @param {number} y - Y Coordinate to move to
+ * @returns {string} SVG Path Move Command String
+ */
 function svgPathMove(x, y) {
 	return 'M' + Array.from(arguments).join(' ');
 }
 
+/**
+ * Generates SVG Path Command String for the Curve Command
+ * @param {number} x1 - X Coordinate of the first Bezier Curve handle
+ * @param {number} y1 - Y Coordinate of the first Bezier Curve handle
+ * @param {number} x2 - X Coordinate of the second Bezier Curve handle
+ * @param {number} y2 - Y Coordinate of the second Bezier Curve handle
+ * @param {number} x - X Coordinate that the Bezier Curve ends at
+ * @param {number} y - Y Coordinate that the Bezier Curve ends at
+ * @returns {string} SVG Path Curve Command String
+ */
 function svgPathCurve(x1, y1, x2, y2, x, y) {
 	return 'C' + Array.from(arguments).join(' ');
 }
 
+/**
+ * Generates SVG Path Command String for the Arc Command
+ * @param {number} rx - X Radius
+ * @param {number} ry - Y Radius
+ * @param {number} xRot - Arc rotation
+ * @param {number} largeArc - Large Arc Flag, 0 or 1
+ * @param {number} sweep - Sweep Flag, 0 or 1
+ * @param {number} x - X Coordinate that the Arc ends at
+ * @param {number} y - Y Coordinate that the Arc ends at
+ * @returns {string} SVG Path Move Command String
+ */
 function svgPathArc(rx, ry, xRot, largeArc, sweep, x, y) {
 	return 'A' + Array.from(arguments).join(' ');
 }
 
+/**
+ * Generates the SVG Path Command String and updates the Path Element
+ * Calculates the totalt path length and sets the CSS variables accordingly
+ */
 function drawLine() {
 	let width = window.innerWidth;
 	let height = window.innerHeight;
@@ -50,5 +81,9 @@ function drawLine() {
 	pathElement.style.setProperty('--dash-start', pathLength * 3);
 }
 
+/*
+ * Adds event listeners to calculate path animation on load and on resize
+ * This makes the animation "responsive"
+ */
 window.addEventListener('load', drawLine);
 window.addEventListener('resize', drawLine);
