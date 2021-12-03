@@ -102,6 +102,7 @@ body {
 	outline: none;
 }
 
+/* 	Hacky solution to disable the lightblue-background and black text after autocomplete has been used */
 .side-menu .contact-form form input:-webkit-autofill,
 .side-menu .contact-form form input:-webkit-autofill:hover,
 .side-menu .contact-form form input:-webkit-autofill:focus,
@@ -109,7 +110,9 @@ body {
 .side-menu .contact-form form textarea:-webkit-autofill:hover,
 .side-menu .contact-form form textarea:-webkit-autofill:focus
 {
-  -webkit-box-shadow: none;
+	transition: background-color 5000s linear 5000s;
+	color: #FFF;
+	-webkit-text-fill-color: #FFF;
 }
 
 .side-menu .contact-form form input {
