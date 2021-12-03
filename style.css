@@ -8,7 +8,7 @@ body {
 	color: #182532;
 	background-color: #fff;
 }
-
+/* side menu that is postitioned left on big devices och postioned at the bottom on smaller devices */
 .side-menu {
 	display: flex;
 	flex-direction: column;
@@ -37,7 +37,7 @@ body {
 	text-decoration: none;
     color: inherit;
 }
-
+/* defines rules for hamburger menu */
 .side-menu #menu-toggle {
 	display: flex;
 	justify-content: flex-end;
@@ -302,6 +302,7 @@ body {
 	color: lightgreen;
 	margin-left: 1rem;
 }
+
 
 @keyframes photo-outline {
 	60% {
