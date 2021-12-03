@@ -1,8 +1,9 @@
 # Digitalt CV - av Olivia Isberg
 
-Mitt digitala CV som gjort gjort med HTML, CSS och jag har använt javascript för att få interaktivitet på sidan.
+Mitt CV utvecklat med HTML, CSS, JavaScript och SVG.
 
-Jag presenterar mig själv, mina utbildningar samt arbetserfarenhet. 
+Jag presenterar mig själv, mina utbildningar samt arbetserfarenhet.'
+Jag kommer hålla CVt i ajour med de kurser jag läser, framtida praktiker och eventuella jobb.
 
 
 [demo](https://oliviaisberg.github.io/Digitalt-CV/)
