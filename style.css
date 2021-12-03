@@ -205,6 +205,31 @@ body {
 	padding-right: 2rem;
 }
 
+.photo-wrapper {
+	display: inline-block;
+	border-radius: 100%;
+	border: 3px solid transparent;
+	animation: photo-outline 4s linear forwards;
+
+}
+
+.main-content .photo img {
+	border-radius: 100%;
+	border: 3px solid transparent;
+	vertical-align: top;
+}
+
+/* adds outline to CV photo, after lineanimation has looped around it */
+@keyframes photo-outline {
+	60% {
+		border: 3px solid transparent;	
+	}
+
+	61%, 100% {
+		border: 3px solid #000;
+	}
+}
+
 .main-content  h1 {
     font-size: 5em;
 	font-weight: 700;
@@ -250,13 +275,6 @@ body {
 	color: #858585;
 }
 
-.main-content img {
-	border-radius: 100%;
-	border: 3px solid transparent;
-	outline: 3px solid transparent;
-	animation: photo-outline 4s linear forwards;
-}
-
 .descriptive-text p {
 	padding-left: 0.4rem;
 }
@@ -300,21 +318,10 @@ body {
 }
 
 
-.check-icon{
+.check-icon {
 	font-size: 25px;
 	color: lightgreen;
 	margin-left: 1rem;
-}
-
-/* adds outline to CV photo, after lineanimation has looped around it */
-@keyframes photo-outline {
-	60% {
-		outline: 3px solid transparent;	
-	}
-
-	61%, 100% {
-		outline: 3px solid #000;
-	}
 }
 
 /*

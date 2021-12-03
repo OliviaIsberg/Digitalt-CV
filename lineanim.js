@@ -55,7 +55,7 @@ function drawLine() {
 	let bezierHandle1X = cOffsetRight + (startingPointX - cOffsetRight) / 2
 	let cvRadius = parseInt(window.getComputedStyle(cLocator).getPropertyValue('font-size').slice(0, -2));
 	let midPointX = cOffsetRight - (photo.offsetLeft + photo.offsetWidth / 2)
-	let photoRadius = (photo.offsetWidth + parseInt(window.getComputedStyle(photo).getPropertyValue('outline-width').slice(0, -2))) / 2;
+	let photoRadius = (photo.offsetWidth + 3) / 2;
 	let photoMidX = photo.offsetLeft + photo.offsetWidth / 2;
 	let photoMidY = photo.offsetTop + photo.offsetHeight / 2
 	let photoBottomLeftX = photoMidX + (photoRadius * Math.cos(135 * Math.PI / 180));
@@ -76,7 +76,9 @@ function drawLine() {
 
 	pathElement.setAttribute('d', path);
 
-	let pathLength = pathElement.getTotalLength();
+	// Add 50% fudge factor to workaround annoying safari bug on IOS with improperly calculated path length
+	let pathLength = Math.ceil(pathElement.getTotalLength() * 1.5);
+
 	pathElement.style.setProperty('--dash-length', pathLength);
 	pathElement.style.setProperty('--dash-start', pathLength * 3);
 }
