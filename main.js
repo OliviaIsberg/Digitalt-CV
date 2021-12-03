@@ -27,6 +27,7 @@ function addEventListeners() {
  */
 function toggleMenu(e) {
     let aside = document.querySelector('aside');
+    document.body.classList.remove('modal');
     aside.classList.toggle('show-menu');
     aside.classList.remove('show-contact');
 	e.preventDefault();
