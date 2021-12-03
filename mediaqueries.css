@@ -81,7 +81,11 @@
 		width: 100%;
 	}
 
-	.side-menu .menu-items .socials{
+    .side-menu .contact-form form input[type=submit] {
+        margin-bottom: 0;
+    }
+
+	.side-menu .menu-items .socials {
 		width: 100%;
 	}
 

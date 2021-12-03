@@ -8,6 +8,11 @@ body {
 	color: #182532;
 	background-color: #fff;
 }
+
+body.modal {
+	overflow: hidden;
+}
+
 /* side menu that is postitioned left on big devices och postioned at the bottom on smaller devices */
 .side-menu {
 	display: flex;
@@ -31,6 +36,7 @@ body {
 
 .side-menu.show-contact {
     width: 100%;
+	overflow-y: auto;
 }
 
 .side-menu a {
@@ -122,11 +128,10 @@ body {
     border: none;
     border-bottom: 1.5px solid rgba(255, 255, 255, 0.5);
     font-size: 110%;
-}
 
-.side-menu .contact-form form input[type=submit]:hover {
-    background-color: rgba(255, 255, 255, .4);
-    background: linear-gradient(90deg, rgba(255, 255, 255, .3) 0%, rgba(255, 255, 255, .5) 50%, rgba(255, 255, 255, .3) 100%);
+	/* Remove ugly default styling on iOS Safari */
+	-webkit-appearance: none;
+	border-radius: 0;
 }
 
 .side-menu .contact-form form textarea {
@@ -147,7 +152,14 @@ body {
     font-weight: 700;
     font-size: 15px;
     cursor: pointer;
+	margin-bottom: 6rem;
 }
+
+.side-menu .contact-form form input[type=submit]:hover {
+    background-color: rgba(255, 255, 255, .4);
+    background: linear-gradient(90deg, rgba(255, 255, 255, .3) 0%, rgba(255, 255, 255, .5) 50%, rgba(255, 255, 255, .3) 100%);
+}
+
 
 .side-menu .menu-items {
 	flex-grow: 1;

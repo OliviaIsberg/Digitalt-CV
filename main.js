@@ -40,6 +40,7 @@ function toggleMenu(e) {
  */
 function toggleContactForm(e) {
 	let aside = document.querySelector('aside');
+    document.body.classList.toggle('modal');
     aside.classList.toggle('show-contact');
 	aside.classList.remove('show-menu');
 	e.preventDefault();
