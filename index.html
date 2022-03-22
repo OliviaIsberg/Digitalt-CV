@@ -1,144 +1,173 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="style.css">
-	<link rel="stylesheet" href="mediaqueries.css">
-    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.15.4/css/all.css">
-	<link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Source+Sans+Pro:200,300,400,600,700,900" type="text/css">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="style.css" />
+    <link rel="stylesheet" href="mediaqueries.css" />
+    <link
+      rel="stylesheet"
+      href="https://use.fontawesome.com/releases/v5.15.4/css/all.css"
+    />
+    <link
+      rel="stylesheet"
+      href="https://fonts.googleapis.com/css?family=Source+Sans+Pro:200,300,400,600,700,900"
+      type="text/css"
+    />
     <script src="main.js"></script>
-	<script src="lineanim.js"></script>
+    <script src="lineanim.js"></script>
     <title>Olivia Isberg | CV</title>
-</head>
-<body>
-	<!-- hamburger icon -->
+  </head>
+  <body>
+    <!-- hamburger icon -->
     <aside class="side-menu">
-		<a href="#" id="menu-toggle">
-			<div class="menu-toggle-icon">
-				<i class="fas fa-bars"></i>
-			</div>
-		</a>
-		<!-- links to my github, linkedin and contact form -->
-        <div id="menu-content">
-			<div class="menu-items">
-				<ul class="socials">
-					<li><a href="https://github.com/OliviaIsberg?tab=repositories"><i class="fab fa-github"></i><span class="label">GitHub</span></a></li>
-					<li><a href="https://www.linkedin.com/in/olivia-isberg-b02ba7226"><i class="fab fa-linkedin"></i><span class="label">LinkedIn</span></a></li>
-					<li><a href="#" id="contact"><i class="fas fa-envelope"></i><span class="label">Kontakt</span></a></li>
-				</ul>
-			</div>
-			<!-- form for contacting me -->
-			<div class="contact-form">
-				<div class="contact-container">
-					<form action="https://formspree.io/f/mnqwaynk" method="POST">
-						<label for="name">Namn</label>
-						<input type="text" id="name" name="name">
-
-						<label for="email">Email</label>
-						<input type="email" id="email" name="email">
-
-						<label for="message">Meddelande</label>
-						<textarea name="message" id="message" rows="20"></textarea>
-						
-						<input type="submit" value="Skicka">
-					</form>
-				</div>
-			</div>
+      <a href="#" id="menu-toggle">
+        <div class="menu-toggle-icon">
+          <i class="fas fa-bars"></i>
         </div>
+      </a>
+      <!-- links to my github, linkedin and contact form -->
+      <div id="menu-content">
+        <div class="menu-items">
+          <ul class="socials">
+            <li>
+              <a href="https://github.com/OliviaIsberg?tab=repositories"
+                ><i class="fab fa-github"></i
+                ><span class="label">GitHub</span></a
+              >
+            </li>
+            <li>
+              <a href="https://www.linkedin.com/in/olivia-isberg-b02ba7226"
+                ><i class="fab fa-linkedin"></i
+                ><span class="label">LinkedIn</span></a
+              >
+            </li>
+            <li>
+              <a href="#" id="contact"
+                ><i class="fas fa-envelope"></i
+                ><span class="label">Kontakt</span></a
+              >
+            </li>
+          </ul>
+        </div>
+        <!-- form for contacting me -->
+        <div class="contact-form">
+          <div class="contact-container">
+            <form action="https://formspree.io/f/mnqwaynk" method="POST">
+              <label for="name">Namn</label>
+              <input type="text" id="name" name="name" />
+
+              <label for="email">Email</label>
+              <input type="email" id="email" name="email" />
+
+              <label for="message">Meddelande</label>
+              <textarea name="message" id="message" rows="20"></textarea>
+
+              <input type="submit" value="Skicka" />
+            </form>
+          </div>
+        </div>
+      </div>
     </aside>
     <main class="main-content">
-		<article class="photo">
-			<div class="photo-wrapper">
-				<img src="Olivia.jpg" id="photo" width="151" height="151">
-			</div>
-		</article>
-        <article class="descriptive-text">
-			<!-- Information about me -->
-			<article class="olivia">
-				<h1>Olivia Isberg <span class="thin">| <span id="c-locator">C</span>V</span></h1>
-				<p>Front End Developer under utbildning</p>
-			</article>
-			<section class="about-me">
-				<p>
-					Jag är en 26-årig tjej bosatt i Göteborg som studerar till front-end developer på Medieinstitutet i Göteborg.
-				</p>
-				<p>
-					Mina främsta egenskaper är att jag är driven, målinriktad och snabblärd. När jag brinner för något så ger jag mig inte förrän jag har lyckats. 
-				</p>
-			</section>
-		
-			<!-- education and work experience -->
-			<h2 class="cv-header">Curriculum Vitae</h2>
-			<section class="cv">
-				<article class="activity">
-					<h3>Medieinstitutet</h3>
-					<p>Utbildning | Front end developer | 2021 - 2023</p>
-				</article>
-
-				<article class="activity">
-					<h3>Ica Sannegården</h3>
-					<p>Jobb | Driftansvarig | September 2021 - nuvarande</p>
-				</article>
-				<article class="activity">
-					<h3>Hemköp Bifrost</h3>
-					<p>Jobb | Spel och postansvarig | Septemer 2014 - September 2021</p>
-				</article>
-
-				<article class="activity">
-					<h3>Elof Lindälvs gymnasium</h3>
-					<p>Utbildning |Hotell och turism | 2011 - 2014</p>
-				</article>
-			</section>
-
-			<!-- courses that i will finish in school -->
-			<h2>Kurser</h2>
-			<section class="education">
-				<article class="activity">
-					<h4>HTML och CSS<i class="fas fa-check check-icon"></i></h4>
-				</article>
-
-				<article class="activity">
-					<h4>UX och Usability<i class="fas fa-check check-icon"></i></h4>
-				</article>
-
-				<article class="activity">
-					<h4>JavaScript grundkurs</h4>
-					<p>start 1/11, 2021</p>
-				</article>
-
-				<article class="activity">
-					<h4>JavaScript fördjupning</h4>
-					<p>start 7/2, 2022</p>
-				</article>
-
-				<article class="activity">
-					<h4>Dynamisk webbutveckling</h4>
-					<p>start 4/4, 2022</p>
-				</article>
-
-				<article class="activity">
-					<h4>Grafiska verktyg för gränssnittsanalys</h4>
-					<p>start 6/6, 2022</p>
-				</article>
-
-				<article class="activity">
-					<h4>Projektarbete med agila metoder</h4>
-					<p>start 22/8, 2022</p>
-				</article>
-
-				<article class="activity">
-					<h4>Arbetsmetodik för utvecklare</h4>
-					<p>start 21/11, 2022</p>
-				</article>
-			</section>
-
+      <article class="photo">
+        <div class="photo-wrapper">
+          <img src="Olivia.jpg" id="photo" width="151" height="151" />
+        </div>
+      </article>
+      <article class="descriptive-text">
+        <!-- Information about me -->
+        <article class="olivia">
+          <h1>
+            Olivia Isberg
+            <span class="thin">| <span id="c-locator">C</span>V</span>
+          </h1>
+          <p>Front End Developer under utbildning</p>
         </article>
+        <section class="about-me">
+          <p>
+            Jag är en 26-årig tjej bosatt i Göteborg som studerar till front-end
+            developer på Medieinstitutet i Göteborg.
+          </p>
+          <p>
+            Mina främsta egenskaper är att jag är driven, målinriktad och
+            snabblärd. När jag brinner för något så ger jag mig inte förrän jag
+            har lyckats.
+          </p>
+        </section>
+
+        <!-- education and work experience -->
+        <h2 class="cv-header">Curriculum Vitae</h2>
+        <section class="cv">
+          <article class="activity">
+            <h3>Medieinstitutet</h3>
+            <p>Utbildning | Front end developer | 2021 - 2023</p>
+          </article>
+
+          <article class="activity">
+            <h3>Ica Sannegården</h3>
+            <p>Jobb | Driftansvarig | September 2021 - nuvarande</p>
+          </article>
+          <article class="activity">
+            <h3>Hemköp Bifrost</h3>
+            <p>Jobb | Spel och postansvarig | Septemer 2014 - September 2021</p>
+          </article>
+
+          <article class="activity">
+            <h3>Elof Lindälvs gymnasium</h3>
+            <p>Utbildning |Hotell och turism | 2011 - 2014</p>
+          </article>
+        </section>
+
+        <!-- courses that i will finish in school -->
+        <h2>Kurser</h2>
+        <section class="education">
+          <article class="activity">
+            <h4>HTML och CSS<i class="fas fa-check check-icon"></i></h4>
+          </article>
+
+          <article class="activity">
+            <h4>UX och Usability<i class="fas fa-check check-icon"></i></h4>
+          </article>
+
+          <article class="activity">
+            <h4>JavaScript grundkurs<i class="fas fa-check check-icon"></i></h4>
+            <p>start 1/11, 2021</p>
+          </article>
+
+          <article class="activity">
+            <h4>JavaScript fördjupning</h4>
+            <p>start 7/2, 2022</p>
+          </article>
+
+          <article class="activity">
+            <h4>Dynamisk webbutveckling</h4>
+            <p>start 4/4, 2022</p>
+          </article>
+
+          <article class="activity">
+            <h4>Grafiska verktyg för gränssnittsanalys</h4>
+            <p>start 6/6, 2022</p>
+          </article>
+
+          <article class="activity">
+            <h4>Projektarbete med agila metoder</h4>
+            <p>start 22/8, 2022</p>
+          </article>
+
+          <article class="activity">
+            <h4>Arbetsmetodik för utvecklare</h4>
+            <p>start 21/11, 2022</p>
+          </article>
+        </section>
+      </article>
     </main>
-	<!-- svg element containing path element for line effect on load -->
+    <!-- svg element containing path element for line effect on load -->
     <svg class="lineanim">
-		<path id="path" d="
+      <path
+        id="path"
+        d="
 			M 2016 921 
 			C 1728 921 1632 736 1536 562 
 			C 1440 388 1344 195 902 195 
@@ -148,7 +177,8 @@
 			A 80 80 0 0 1 239 63 
 			A 80 80 0 0 1 239 223 
 			C 79 223 -96 39 -96 -145
-		" />
-	</svg>
-</body>
+		"
+      />
+    </svg>
+  </body>
 </html>
